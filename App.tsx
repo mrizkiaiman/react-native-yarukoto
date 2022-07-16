@@ -1,13 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View } from 'react-native'
+import { Text } from 'native-base'
+
+import { NativeBaseProvider } from 'native-base'
+import { useLoadFonts } from './src/utils/hooks/useLoadFonts'
+import { theme } from './src/utils/styles/theme'
+
+import { Home } from './src/screens/home'
 
 export default function App() {
+  const fontsIsLoaded = useLoadFonts()
+  if (!fontsIsLoaded) return null
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <NativeBaseProvider theme={theme}>
+      <Home />
+    </NativeBaseProvider>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -17,4 +26,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
