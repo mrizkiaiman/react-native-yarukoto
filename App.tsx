@@ -1,21 +1,17 @@
-import { StatusBar } from 'expo-status-bar'
 import { StyleSheet, View } from 'react-native'
-import { Text } from 'native-base'
-
-import { NativeBaseProvider } from 'native-base'
 import { useLoadFonts } from './src/utils/hooks/useLoadFonts'
-import { theme } from './src/utils/styles/theme'
+import { AppContainer } from './src/components/containers/AppContainer'
 
-import { Home } from './src/screens/home'
+import { AppNavigator } from './src/navigation/app-navigator'
 
 export default function App() {
   const fontsIsLoaded = useLoadFonts()
   if (!fontsIsLoaded) return null
 
   return (
-    <NativeBaseProvider theme={theme}>
-      <Home />
-    </NativeBaseProvider>
+    <AppContainer>
+      <AppNavigator />
+    </AppContainer>
   )
 }
 
