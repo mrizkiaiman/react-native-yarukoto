@@ -6,19 +6,25 @@ import { useNavigation } from '@react-navigation/native'
 import { DrawerNavigationProp } from '@react-navigation/drawer'
 import { HomeProps } from '../navigation/types'
 
-export const Banner = () => {
+interface BannerProps {
+  image: React.ReactNode
+  bg?: string
+}
+
+export const Banner: React.FC<BannerProps> = ({ image, bg = 'cyan.900' }) => {
   const navigation = useNavigation<DrawerNavigationProp<HomeProps>>()
   const openDrawer = () => {
     navigation.openDrawer()
   }
   return (
-    <Center bg={'cyan.900'} height={'35%'} width={'100%'}>
+    <Center bg={bg} width={'100%'} w={'full'} h={'280px'}>
       <IconButton
         position={'absolute'}
         onPress={openDrawer}
         style={{
-          top: 32,
+          top: 26,
           left: 12,
+          zIndex: 1,
         }}
         _icon={{
           as: Ionicons,
@@ -27,14 +33,10 @@ export const Banner = () => {
           color: 'white',
         }}
       />
-      <Image
-        alt="banner-image"
-        source={require('../assets/banner.png')}
-        style={{ height: 310, width: 310, resizeMode: 'contain' }}
-      />
+      {image}
       <Text
         position={'absolute'}
-        fontSize={11}
+        fontSize={12}
         fontWeight={'extrabold'}
         color={'white'}
         pr={12}

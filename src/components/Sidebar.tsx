@@ -10,7 +10,7 @@ export const Sidebar: React.FC<DrawerContentComponentProps> = props => {
   const { state, navigation } = props
   const currentRoute = state.routeNames[state.index]
 
-  const { navigatorColors, sidebarColors } = useColors()
+  const { navigatorColors, defaultColors } = useColors()
   const { colorMode, toggleColorMode } = useColorMode()
 
   const navigateToHome = () => {
@@ -24,7 +24,7 @@ export const Sidebar: React.FC<DrawerContentComponentProps> = props => {
   }
 
   return (
-    <VStack bg={sidebarColors} height={'100%'} pt={'100px'} paddingX={'24px'}>
+    <VStack bg={defaultColors} height={'100%'} pt={'100px'} paddingX={'24px'}>
       <IconButton
         onPress={closeDrawer}
         position={'absolute'}
@@ -61,11 +61,11 @@ export const Sidebar: React.FC<DrawerContentComponentProps> = props => {
           About
         </MenuButton>
       </Box>
-      <HStack space={2} alignItems="center" mt={'90%'} alignSelf="center">
+      <HStack space={2} alignItems="center" mt={'84px'} alignSelf="center">
         <Text fontSize={16} fontWeight={'bold'}>
           Dark
         </Text>
-        <Switch isChecked={colorMode === 'light'} onToggle={toggleColorMode} size="lg"></Switch>
+        <Switch isChecked={colorMode === 'light'} onToggle={toggleColorMode} size="md"></Switch>
         <Text fontSize={16} fontWeight={'bold'} mr={'12px'}>
           Light
         </Text>
