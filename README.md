@@ -1,7 +1,7 @@
 ## What is Yarukoto?
 ---
-- Yarukoto's naming is comes from "what you need to do" in Japanese language
-- It's an animated to-do list app that inspired and a duplicate of [Takuya (devaslife)](https://www.youtube.com/c/devaslife) YouTube video tutorial (I highly recommend you to watch his videos too!)
+- Yarukoto's naming comes from "what you need to do" in Japanese language
+- It's an animated to-do list app that inspired and a replica of [Takuya (devaslife)](https://www.youtube.com/c/devaslife) YouTube video tutorial (I highly recommend you to watch his videos too!)
 
 ## Tech-stack
 ---
@@ -20,4 +20,9 @@
 expo install
 ```
 - Just follow the instructions that displayed on your terminal (shoutout to Expo team for this helpful DX!)
-- Example: Type A if you want to open from your Android device/emulator
+- Example: Type A if you want to open the app from your Android device/emulator
+
+## Demo
+https://user-images.githubusercontent.com/53157683/183869037-c250d8cd-4177-4967-b99b-821670c3a0fd.mp4
+
+
