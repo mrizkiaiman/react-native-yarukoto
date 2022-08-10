@@ -1,10 +1,8 @@
 ## What is Yarukoto?
----
 - Yarukoto's naming comes from "what you need to do" in Japanese language
-- It's an animated to-do list app that inspired and a replica of [Takuya (devaslife)](https://www.youtube.com/c/devaslife) YouTube video tutorial (I highly recommend you to watch his videos too!)
+- It's an animated to-do list app that inspired and a replica of [Takuya (devaslife)](https://www.youtube.com/c/devaslife)'s YouTube video tutorial (I highly recommend to watch his videos too!)
 
 ## Tech-stack
----
 - **React Native**
 - **Expo**
 - **TypeScript**
@@ -13,7 +11,6 @@
 - **React Native Reanimated**
 
 ## Run the app
----
 - Make sure to have [expo-cli](https://docs.expo.dev/workflow/expo-cli/) installed 
 - Run this command on terminal
 ```
